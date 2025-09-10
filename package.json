@@ -1,0 +1,22 @@
+{
+  "name": "playwright-automation-basics",
+  "version": "1.0.0",
+  "description": "This repository contains my practice and learning journey with [Playwright](https://playwright.dev/), focusing on building a strong foundation in web automation testing.  \r It starts with the basics and gradually explores more advanced features.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahim-shahriar-sqa/Playwright-Automation-Basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fahim-shahriar-sqa/Playwright-Automation-Basics/issues"
+  },
+  "homepage": "https://github.com/fahim-shahriar-sqa/Playwright-Automation-Basics#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.1"
+  }
+}
