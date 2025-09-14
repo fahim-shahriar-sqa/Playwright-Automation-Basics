@@ -81,3 +81,24 @@ test('PressKey', async ({ page }) => {
   await page.press("input[placeholder='What needs to be done?']", "Enter");
   await page.waitForTimeout(2000);
 });
+
+test('DragDrop', async ({ page }) => {
+  await page.goto('https://testkru.com/Interactions/DragAndDrop');
+  await page.waitForTimeout(2000);
+
+  await page.locator('#box1').dragTo(page.locator('#dropZone1'));
+  await page.waitForTimeout(2000);
+
+  await page.locator('#box2').dragTo(page.locator('#dropZone1'));
+  await page.waitForTimeout(2000);
+
+  await page.locator('#box3').dragTo(page.locator('#dropZone3'));
+  await page.waitForTimeout(2000);
+});
+
+test('Screenshot', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  await page.waitForTimeout(2000);
+  await page.hover("//a[@class='getStarted_Sjon']");
+  await page.waitForTimeout(2000);
+});
