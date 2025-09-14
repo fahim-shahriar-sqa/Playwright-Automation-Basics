@@ -1,5 +1,6 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
+import path from 'path';
 
 test('click', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -99,6 +100,6 @@ test('DragDrop', async ({ page }) => {
 test('Screenshot', async ({ page }) => {
   await page.goto('https://playwright.dev/');
   await page.waitForTimeout(2000);
-  await page.hover("//a[@class='getStarted_Sjon']");
+  await page.screenshot({path: 'Test1.png'});
   await page.waitForTimeout(2000);
 });
