@@ -8,6 +8,13 @@ test('click', async ({ page }) => {
   await page.waitForTimeout(2000);
 });
 
+test('Hover', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  await page.waitForTimeout(2000);
+  await page.hover("//a[@class='getStarted_Sjon']");
+  await page.waitForTimeout(2000);
+});
+
 test('allClicks', async ({ page }) => {
   await page.goto('https://testkru.com/Elements/Buttons');
   await page.waitForTimeout(2000);
