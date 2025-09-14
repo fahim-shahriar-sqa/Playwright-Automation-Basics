@@ -65,3 +65,12 @@ test('selectOption', async ({ page }) => {
   await page.selectOption("#dropdown", "2");
   await page.waitForTimeout(2000);
 });
+
+test('PressKey', async ({ page }) => {
+  await page.goto('https://demo.playwright.dev/todomvc');
+  await page.waitForTimeout(2000);
+  await page.fill("input[placeholder='What needs to be done?']", "Test");
+  await page.waitForTimeout(2000);
+  await page.press("input[placeholder='What needs to be done?']", "Enter");
+  await page.waitForTimeout(2000);
+});
