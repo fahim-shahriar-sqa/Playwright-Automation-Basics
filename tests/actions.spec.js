@@ -58,3 +58,10 @@ test('typeAction', async ({ page }) => {
   await page.fill("//input[@id='preFilledTextField']", " Pre-filled Text");
   await page.waitForTimeout(2000);
 });
+
+test('selectOption', async ({ page }) => {
+  await page.goto('https://the-internet.herokuapp.com/dropdown');
+  await page.waitForTimeout(2000);
+  await page.selectOption("#dropdown", "2");
+  await page.waitForTimeout(2000);
+});
