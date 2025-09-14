@@ -45,3 +45,11 @@ test('checkboxes', async ({ page }) => {
   await page.waitForTimeout(2000);
   await page.uncheck("//li[normalize-space()='Websites']//input[@type='checkbox']");
 });
+
+test('typeAction', async ({ page }) => {
+  await page.goto('https://testkru.com/Elements/TextFields');
+  await page.waitForTimeout(2000);
+  await page.type("//div[@class='mt-2 row text-dark font-weight-bold']//input[@id='firstName']", "My Demo Test", {delay: 2000});
+  await page.waitForTimeout(2000);
+  
+});
