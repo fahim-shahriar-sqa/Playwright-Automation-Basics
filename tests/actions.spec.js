@@ -49,7 +49,12 @@ test('checkboxes', async ({ page }) => {
 test('typeAction', async ({ page }) => {
   await page.goto('https://testkru.com/Elements/TextFields');
   await page.waitForTimeout(2000);
-  await page.type("//div[@class='mt-2 row text-dark font-weight-bold']//input[@id='firstName']", "My Demo Test", {delay: 2000});
+  await page.type("//div[@class='mt-2 row text-dark font-weight-bold']//input[@id='firstName']", "Fahim", {delay: 100});
   await page.waitForTimeout(2000);
-  
+  await page.type("//input[@id='lastNameWithPlaceholder']", "Shahriar", {delay: 100});
+  await page.waitForTimeout(2000);
+  await page.type("textarea[class='pt-1 pb-1 pr-2 pl-2']", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat turpis purus, vitae suscipit turpis molestie vitae.", {delay: 100});
+  await page.waitForTimeout(2000);
+  await page.fill("//input[@id='preFilledTextField']", " Pre-filled Text");
+  await page.waitForTimeout(2000);
 });
